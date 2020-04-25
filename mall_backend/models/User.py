@@ -1,49 +1,62 @@
 from models import db
 
+"""
+未使用ORM，
+"""
 
 class UserModel(db.Model):
+    __tablename__ = 'usermodel'
     id = db.Column(db.Integer, primary_key=True, autoincrement=True)
     username = db.Column(db.String(255))
     password = db.Column(db.String(255))
     phone = db.Column(db.String(11))
-    userprofile = db.relationship('UserProfile', back_populates='usermodel')
+
+    userprofile = db.relationship('UserProfile', backref=db.backref('usermodel'))
 
 
 class UserProfile(db.Model):
+    __tablename__ = 'userprofile'
     id = db.Column(db.Integer, primary_key=True, autoincrement=True)
-
     balance = db.Column(db.DECIMAL(2), comment='用户余额')
     integral = db.Column(db.Integer, comment='用户积分')
 
+    user_id = db.Column(db.ForeignKey('usermodel.id'))
 
-    usermodel = db.relationship('UserModel', back_populates='userprofile')
-    coupon = db.relationship('Coupon', back_populates='userprofile')
-    message = db.relationship('Message', back_populates='userprofile')
+    coupon = db.relationship('Coupon', backref='userprofile')
+    messages = db.relationship('Message', backref='userprofile')
+    shop_cart = db.relationship('ShopCart', backref='userprofile')
+    order = db.relationship('Order', backref='userprofile')
+
 
 class Coupon(db.Model):
+    __tablename__ = 'coupon'
     id = db.Column(db.Integer, primary_key=True, autoincrement=True)
     price = db.Column(db.DECIMAL)
     category = db.Column(db.String(32))
 
-    userprofile = db.relationship('UserProfile', back_populates='coupon')
+    user_profile_id = db.Column(db.ForeignKey('userprofile.id'))
 
 
 class Message(db.Model):
+    __tablename__ = 'message'
     id = db.Column(db.Integer, primary_key=True, autoincrement=True)
     from_shop_name = db.Column(db.String(64))
     content = db.Column(db.Text)
 
-    userprofile = db.relationship('UserProfile', back_populates='message')
+    user_profile_id = db.Column(db.ForeignKey('userprofile.id'))
 
 
 class ShopCart(db.Model):
+    __tablename__ = 'shopcart'
     id = db.Column(db.Integer, primary_key=True, autoincrement=True)
 
-    shop = db.relationship('Shop', back_populates='shopcart')
-    userprofile = db.relationship('UserProfile', back_populates='shopcart')
+    shop_id = db.Column(db.ForeignKey('shop.id'))
+
+    user_profile_id = db.Column(db.ForeignKey('userprofile.id'))
 
 
 class Shop(db.Model):
+    __tablename__ = 'shop'
     id = db.Column(db.Integer, primary_key=True, autoincrement=True)
     goods_name = db.Column(db.String(255))
     category = db.Column(db.String(32))
@@ -56,12 +69,21 @@ class Shop(db.Model):
     stock = db.Column(db.String(64))
     collections_num = db.Column(db.String(32))
 
+    shop_cart = db.relationship('ShopCart', backref='shop')
 
 class Order(db.Model):
+    __tablename__ = 'order'
     id = db.Column(db.Integer, primary_key=True, autoincrement=True)
-
     price_sum = db.Column(db.DECIMAL)
     order_num = db.Column(db.Integer)
 
-    goods_list = db.relationship('UserProfile', back_populates='order')
-    userprofile = db.relationship('UserProfile', back_populates='order')
+    user_profile_id = db.Column(db.ForeignKey('userprofile.id'))
+
+
+class Shop2Order(db.Model):
+    __tablename__ = 'shop2order'
+    id = db.Column(db.Integer, primary_key=True, autoincrement=True)
+
+    shop = db.Column(db.ForeignKey('shop.id'))
+    order = db.Column(db.ForeignKey('order.id'))
+

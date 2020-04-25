@@ -16,8 +16,11 @@ def import_data_from_db():
     sql = """insert into {0}({1}) values ({2})""".format(table_name,
                                                          '`' + "`,`".join(back_list) + '`',
                                                          str(r'%s,' * len(field_list))[:-1])
+    new_data_list = []
+    for data_dic in source_data:
+        new_data_list.append(list(data_dic.values()))
     target_cursor = conn.cursor()
-    target_cursor.executemany(sql, [list(dic.values()) for dic in source_data])
+    target_cursor.executemany(sql, new_data_list)
     conn.commit()
 
 if __name__ == '__main__':

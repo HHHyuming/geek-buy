@@ -8,7 +8,7 @@ password = 'root'
 database = 'mogujie'
 charset = 'utf8'
 user = 'root'
-db_name = 'book37'
+db_name = 'mogujie'
 conn = Connection(host=host, user=user, password=password,database=database, port=port, charset=charset)
 
 

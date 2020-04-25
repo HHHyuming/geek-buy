@@ -1,13 +1,13 @@
-from werkzeug.exceptions import HTTPException
-import json
+"""
+restful 统一返回JSON数据格式 ----
+"""
 
+class MyResponse(ResponseBase):
+    def __init__(self,code,msg,data):
+        self.code = code
+        self.msg = msg
+        self.data = data
 
-class APIException(HTTPException):
+        super().__init__()
 
-    def get_body(self, environ=None):
-        """Get the HTML body."""
-        return json.dumps(dict(
-            code=self.code,
-            name=self.name,
-            description=self.get_description(environ)
-        ))
+    def
