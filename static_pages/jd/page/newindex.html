@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="//at.alicdn.com/t/font_1859056_pi5ilo8xwyj.css"
+    />
+    <link rel="stylesheet" href="../css/nav.css" />
+    <link rel="stylesheet" href="../css/top.css" />
+    <link rel="stylesheet" href="../css/reset.css" />
+  </head>
+
+  <style>
+    body {
+      background-color: #f4f4f4;
+      height: 100vh;
+      width: 100vw;
+    }
+    .container {
+      width: 1000px;
+      height: 100vh;
+      margin: 0 auto;
+    }
+    /* header */
+    .top {
+      border: 1px solid blueviolet;
+      height: 40px;
+      display: flex;
+      justify-content: space-between;
+      color: #afafb0;
+      font-size: 14px;
+      line-height: 3em;
+    }
+    nav {
+      background-color: white;
+      width: 100vw;
+      height: 175px;
+      position: absolute;
+      left: 0;
+      border: 1px solid red;
+    }
+    /* main */
+    /* a1 */
+    main article:nth-of-type(1) {
+      display: flex;
+      height: 590px;
+      border: 1px solid seagreen;
+      margin-top: 197px;
+    }
+
+    main article section:nth-of-type(1) {
+      /* background-color: greenyellow; */
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      background-color: white;
+      justify-content: center;
+      align-items: center;
+    }
+
+    main article section:nth-of-type(2) {
+      background-color: orange;
+      flex: 2;
+    }
+
+    main article section:nth-of-type(3) {
+      background-color: purple;
+      flex: 1;
+    }
+    /* a2 */
+
+    main article:nth-of-type(2) {
+      display: flex;
+      height: 360px;
+      margin-top: 30px;
+    }
+
+    main article:nth-of-type(2) section:nth-of-type(1) {
+      background-color: sienna;
+      flex: 1;
+    }
+
+    main article:nth-of-type(2) section:nth-of-type(2) {
+      background-color: royalblue;
+      flex: 3;
+    }
+    /* a3 */
+    .a3 {
+      display: flex;
+      height: 660px;
+      margin-top: 30px;
+      flex-direction: column;
+    }
+    .a3 section:nth-of-type(1) {
+      flex: 1;
+    }
+    .a3 section:nth-of-type(2) {
+      flex: 2;
+    }
+    .a3 section:nth-of-type(3) {
+      flex: 2;
+    }
+    /* footer */
+  </style>
+  <body>
+    <div class="container">
+      <!-- 头部 -->
+      <header>
+        <div class="top">
+          <div>
+            <span>
+              <i class="iconfont icondizhi my-iconfont"></i>
+              江西
+            </span>
+            <section>
+              <div class="top-one-show">
+                <div>北京</div>
+                <div>上海</div>
+                <div>天津</div>
+                <div>重庆</div>
+                <div>河北</div>
+                <div>山西</div>
+                <div>河南</div>
+                <div>辽宁</div>
+                <div>吉林</div>
+                <div>黑龙</div>
+                <div>江内</div>
+                <div>蒙古</div>
+                <div>江苏</div>
+                <div>山东</div>
+                <div>安徽</div>
+                <div>浙江</div>
+                <div>北京</div>
+                <div>上海</div>
+                <div>天津</div>
+                <div>重庆</div>
+                <div>河北</div>
+                <div>山西</div>
+                <div>河南</div>
+                <div>辽宁</div>
+                <div>吉林</div>
+                <div>黑龙</div>
+                <div>江内</div>
+                <div>蒙古</div>
+                <div>江苏</div>
+                <div>山东</div>
+                <div>安徽</div>
+                <div>浙江</div>
+              </div>
+            </section>
+          </div>
+          <div>
+            <div
+              style="
+                text-overflow: ellipsis;
+                overflow: hidden;
+                white-space: nowrap;
+                width: 120px;
+              "
+            >
+              <a href="" style="color: #afafb0;">你好，请登录</a>
+              <a href="" style="color: red;">免费注册</a>
+            </div>
+            <div class="split-line"></div>
+            <div>我的订单</div>
+            <div class="split-line"></div>
+            <div class="my-jd">
+              <span style="color: red;"
+                >我的京东
+                <i class="iconfont iconxiala2" style="font-size: 12px;"></i>
+              </span>
+              <section>
+                <div>
+                  <div>
+                    <span>待处理订单</span>
+                    <span>消息</span>
+                  </div>
+                  <div>
+                    <span>返修退换货</span>
+                    <span>我的问答</span>
+                  </div>
+                  <div>
+                    <span>降价商品</span>
+                    <span>我的关注</span>
+                  </div>
+                  <div>
+                    <span>我的京豆</span>
+                    <span>我的白条</span>
+                  </div>
+                  <div>
+                    <span>我的优惠券</span>
+                    <span>我的理财</span>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div class="split-line"></div>
+            <div>京东会员</div>
+            <div class="split-line"></div>
+            <div class="enterprise-pro">
+              <span style="color: red;"
+                >企业采购
+                <i class="iconfont iconxiala2" style="font-size: 12px;"></i>
+              </span>
+              <section>
+                <div>
+                  <div>
+                    <div>企业购</div>
+                    <div>商用场景馆</div>
+                  </div>
+                  <div>
+                    <div>工业品</div>
+                    <div>礼品卡</div>
+                  </div>
+                  <div>
+                    <div>丰客多商城</div>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div class="split-line"></div>
+            <div>客户服务</div>
+            <div class="split-line"></div>
+            <div>网站导航</div>
+            <div class="split-line"></div>
+            <div>手机京东</div>
+          </div>
+        </div>
+        <!-- 导航，搜索引擎 -->
+        <nav class="nav">
+          <section>
+            <a
+              href="https://img10.360buyimg.com/img/jfs/t1/117726/20/7368/88789/5ec3777cE70ffaf64/47d8f5d0310958bd.gif"
+            >
+              <img
+                src="https://img10.360buyimg.com/img/jfs/t1/117726/20/7368/88789/5ec3777cE70ffaf64/47d8f5d0310958bd.gif"
+                alt=""
+              />
+            </a>
+          </section>
+          <section>
+            <div style="position: relative;">
+              <input type="text" id="search" placeholder="请输入查询内容" />
+              <div>
+                <i class="iconfont iconcamera"></i>
+              </div>
+              <div>
+                <i class="iconfont iconsearch"></i>
+              </div>
+            </div>
+            <div>
+              <div>海尔好冰箱</div>
+              <div>299减100</div>
+              <div>热卖手机</div>
+              <div>运动618</div>
+              <div>家装建材</div>
+              <div>电脑数码</div>
+              <div>每100-50</div>
+              <div>399减150</div>
+              <div>超市嗨购</div>
+            </div>
+
+            <div>
+              <ul>
+                <li>拍卖</li>
+                <li>品牌闪购</li>
+                <li>PLUS会员</li>
+                <li>优惠券</li>
+                <li>秒杀</li>
+                <li>京东家电</li>
+                <li>京东超市</li>
+              </ul>
+            </div>
+          </section>
+          <!-- 右侧 -->
+          <section>
+            <div>
+              <div>
+                <span>
+                  <i class="iconfont icongouwucheman"></i>
+                </span>
+                <span>我的购物车</span>
+              </div>
+
+              <div>
+                <img
+                  src="https://img12.360buyimg.com/img/jfs/t1/67481/15/565/28110/5cec9234E71c47244/dc4cf353fd96922e.png.webp"
+                  alt=""
+                />
+              </div>
+            </div>
+            <div>
+              <ul>
+                <li>京东国际</li>
+                <li>京东生鲜</li>
+                <li>京东金融</li>
+              </ul>
+            </div>
+          </section>
+        </nav>
+      </header>
+
+      <!-- 主体 -->
+      <main>
+        <article>
+          <section class="main-left">
+            <div>
+              <span>家用电器</span>
+              <div>
+                <div>
+                  <div>家电馆</div>
+                  <div>家电专卖店</div>
+                  <div>家电服务</div>
+                  <div>企业采购</div>
+                  <div>商用电器</div>
+                  <div>以旧换新</div>
+                </div>
+                <div>
+                  <div>电视</div>
+                  <div>超薄电视</div>
+                  <div>全面屏电视</div>
+                  <div>智能电视</div>
+                  <div>教育电视</div>
+                  <div>OLED电视</div>
+                  <div>智慧屏</div>
+                  <div>4K超清电视</div>
+                </div>
+                <div>
+                  <div>空调</div>
+                  <div>空调挂机</div>
+                  <div>空调柜机</div>
+                  <div>中央空调</div>
+                  <div>变频空调</div>
+                  <div>一级能效</div>
+                  <div>移动空调</div>
+                  <div>以旧换新</div>
+                </div>
+                <div>
+                  <div>洗衣机</div>
+                  <div>滚筒洗衣机</div>
+                  <div>洗烘一体机</div>
+                  <div>波轮洗衣机</div>
+                  <div>迷你洗衣机</div>
+                  <div>烘干机</div>
+                  <div>移动空调</div>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <div>
+                <span>手机</span>
+                <span>/</span>
+                <span>运营商</span>
+                <span>/</span>
+                <span>数码</span>
+              </div>
+              <div>
+                <div>玩3C</div>
+                <div>手机频道</div>
+                <div>网上营业厅</div>
+                <div>配件频道</div>
+                <div>智能数码</div>
+                <div>影像Club</div>
+              </div>
+              <div>
+                <div>手机通讯</div>
+                <div>手机618</div>
+                <div>手机</div>
+                <div>游戏手机</div>
+                <div>5G手机</div>
+                <div>拍照手机</div>
+                <div>全面屏手机</div>
+                <div>老人机</div>
+                <div>对讲机</div>
+                <div>以旧换新</div>
+                <div>手机维修</div>
+              </div>
+            </div>
+          </section>
+          <section class="main-center"></section>
+          <section class="main-right"></section>
+        </article>
+
+        <article>
+          <section class="a2-left"></section>
+          <section class="a2-right"></section>
+        </article>
+
+        <article class="a3">
+          <section></section>
+          <section></section>
+          <section></section>
+        </article>
+      </main>
+    </div>
+  </body>
+</html>

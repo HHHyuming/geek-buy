@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <style>
+      span::after {
+        content: "";
+        background-color: red;
+        border-radius: 5px;
+        width: 20px;
+        height: 10px;
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+      span::after::after {
+        content: "1";
+        display: block;
+      }
+    </style>
+
+    <span style="position: relative;">购物车</span><i></i>
+  </body>
+</html>

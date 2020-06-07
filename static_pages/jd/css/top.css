@@ -1,0 +1,153 @@
+.top > div:nth-of-type(2) {
+  display: flex;
+  margin-right: 0;
+  /* flex: 1;  */
+  /* border: 1px solid red; */
+}
+
+.split-line {
+  border-right: 1px solid #ccc;
+  height: 10px;
+  align-self: center;
+  margin: 0 10px;
+}
+.my-iconfont {
+  color: red;
+  font-size: 17px;
+}
+
+.top > div:nth-of-type(1) {
+  position: relative;
+}
+
+.top > div:nth-of-type(1) > section {
+  display: none;
+  width: 300px;
+  position: absolute;
+  top: 40px;
+  left: -2px;
+  border: 1px solid blueviolet;
+  z-index: 1;
+}
+
+.top > div:nth-child(1) > section div div {
+  padding: 10px;
+}
+
+.top-one-show {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.top > div:nth-child(1):hover {
+  border: 1px solid blueviolet;
+  border-bottom: none;
+  background-color: white;
+  z-index: 2;
+  position: relative;
+  padding-right: 10px;
+}
+.top > div:nth-child(1):hover > span {
+  color: red;
+}
+.top-one-show div:hover {
+  color: red;
+  cursor: pointer;
+}
+
+.top > div:nth-child(1):hover > section {
+  display: block;
+  background-color: white;
+}
+
+.top .my-jd {
+  position: relative;
+}
+.top .my-jd:hover {
+  cursor: pointer;
+  position: relative;
+  /* color: red; */
+  border: 1px solid #ccc;
+  border-bottom: none;
+  z-index: 2;
+  background-color: white;
+}
+.top .my-jd:hover > section {
+  display: block;
+  background-color: white;
+}
+.top .my-jd > section {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  width: 250px;
+  top: 40px;
+  left: -1px;
+}
+.top .my-jd > section > div {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  border: 1px #ccc solid;
+}
+
+.top .my-jd > section > div div {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.top .my-jd > section > div span {
+  /* border: 1px solid red; */
+  display: flex;
+  flex: 1;
+  margin-left: 5px;
+}
+.top .my-jd > section > div span:hover {
+  /* border: 1px solid red; */
+  color: red;
+  cursor: pointer;
+}
+
+.enterprise-pro {
+  position: relative;
+  box-sizing: content-box;
+}
+
+.enterprise-pro:hover {
+  background-color: white;
+  border: 1px solid #ccc;
+  border-bottom: none;
+}
+.enterprise-pro:hover > section {
+  display: block;
+}
+
+.enterprise-pro > span {
+  z-index: 2;
+  position: relative;
+}
+
+.enterprise-pro section {
+  display: none;
+  width: 180px;
+  background-color: white;
+  border: 1px solid #ccc;
+  z-index: 1;
+  position: absolute;
+  top: 40px;
+  left: -1px;
+}
+
+.enterprise-pro section > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.enterprise-pro section > div > div {
+  display: flex;
+}
+
+.enterprise-pro section > div > div > div {
+  margin-left: 10px;
+}

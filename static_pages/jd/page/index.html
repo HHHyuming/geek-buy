@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>京东</title>
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/top.css" />
+    <link
+      rel="stylesheet"
+      href="//at.alicdn.com/t/font_1859056_ecjnb2gfxa5.css"
+    />
+
+    <style>
+      .header {
+        height: 215px;
+        color: black;
+        display: flex;
+        flex-direction: column;
+        font-size: 14px;
+        border: 1px solid silver;
+        margin: 0 auto;
+      }
+      .container {
+        width: 1000px;
+        height: 100vh;
+        border: 1px solid blueviolet;
+        margin: 0 auto;
+      }
+
+      .top-one {
+        display: flex;
+        justify-content: space-between;
+        height: 20px;
+        border: 1px solid blueviolet;
+        padding: 10px;
+      }
+
+      .top-one div:nth-of-type(2) {
+        display: flex;
+      }
+      .top-one div:nth-of-type(2) div {
+        padding: 0 10px;
+      }
+      .spacer {
+        border-right: 1px solid #ccc;
+        height: 14px;
+        margin-top: 5px;
+      }
+
+      .top-one div:nth-of-type(1):hover > .zone {
+        display: block;
+      }
+      .top-one div:nth-of-type(1):hover span {
+        background-color: white;
+        color: red;
+        border: 1px solid silver;
+        border-bottom: none;
+        z-index: 3;
+      }
+      .top-one div:nth-of-type(1) span {
+        z-index: 2;
+        position: relative;
+      }
+
+      .zone {
+        display: none;
+        width: 200px;
+        z-index: 1;
+        position: absolute;
+        background-color: white;
+        border: 1px solid silver;
+        top: 18px;
+      }
+      .zone div {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .zone div div {
+        padding: 10px 10px;
+      }
+      .my-jd {
+        display: none;
+        flex-direction: column;
+      }
+      .my-jd section:nth-of-type(1) {
+        display: flex;
+      }
+    </style>
+  </head>
+  <body style="background-color: #e3e4e5;">
+    <div class="container">
+      <header class="header">
+        <div class="top-one">
+          <div style="position: relative;">
+            <span>
+              <i
+                class="iconfont icondizhi"
+                style="font-size: 14px; color: red;"
+              ></i>
+              江西
+            </span>
+            <div class="zone">
+              <div>
+                <div>江西</div>
+                <div>江西</div>
+                <div>江西</div>
+                <div>江西</div>
+                <div>江西</div>
+                <div>江西</div>
+                <div>江西</div>
+                <div>江西</div>
+                <div>江西</div>
+                <div>江西</div>
+                <div>江西</div>
+                <div>江西</div>
+                <div>江西</div>
+                <div>江西</div>
+                <div>江西</div>
+                <div>江西</div>
+                <div>江西</div>
+                <div>江西</div>
+                <div>江西</div>
+                <div>江西</div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div
+              style="
+                width: 105px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+              "
+            >
+              你好，请登录 免费注册
+            </div>
+            <li class="spacer"></li>
+            <div>我的订单</div>
+            <li class="spacer"></li>
+            <div>
+              我的京东
+              <i class="iconfont iconxiala2" style="font-size: 8px;"></i>
+            </div>
+            <section class="my-jd">
+              <div>
+                <span>待处理订单</span>
+                <span>返修退换货</span>
+                <span>降价商品</span>
+                <span>消息</span>
+                <span>我的问答</span>
+                <span>我的关注 </span>
+              </div>
+              <div>
+                <span>我的京豆</span>
+                <span> 我的白条</span>
+                <span> 我的优惠券</span>
+                <span> 我的理财</span>
+              </div>
+            </section>
+
+            <li class="spacer"></li>
+            <div>京东会员</div>
+            <li class="spacer"></li>
+            <div>企业采购</div>
+            <li class="spacer"></li>
+            <div>客户服务</div>
+            <li class="spacer"></li>
+            <div>网站导航</div>
+            <li class="spacer"></li>
+            <div>手机京东</div>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <!-- 1.主体 -->
+        <article>
+          <!-- 左侧导航  -->
+          <section></section>
+          <!-- 中间轮播图 -->
+          <section></section>
+          <!-- 右侧用户信息 -->
+          <section></section>
+        </article>
+
+        <!-- 2.秒杀 -->
+        <article>
+          <!-- 左侧秒杀 -->
+          <section></section>
+          <!-- 主体商品 -->
+          <section></section>
+        </article>
+        <!-- 右边固定侧侧边栏   -->
+        <article>
+          <aside></aside>
+        </article>
+
+        <!-- 3. -->
+      </main>
+    </div>
+  </body>
+</html>
