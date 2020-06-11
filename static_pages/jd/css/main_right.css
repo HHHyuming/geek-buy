@@ -1,0 +1,132 @@
+.main-right {
+  display: flex;
+  flex-direction: column;
+}
+
+.main-right > div:nth-child(1) {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.main-right > div:nth-child(1) > div:nth-child(1) {
+  display: flex;
+}
+
+.main-right > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) {
+  color: #bbb;
+  font-size: 14px;
+  margin-left: 10px;
+}
+
+.main-right
+  > div:nth-child(1)
+  > div:nth-child(1)
+  > div:nth-child(2)
+  > div:nth-child(2) {
+  /* color: #ccc; */
+  /* font-size: 14px; */
+  /* margin-left: 10px; */
+  color: black;
+}
+
+.main-right
+  > div:nth-child(1)
+  > div:nth-child(1)
+  > div:nth-child(2)
+  > div:nth-child(2)
+  > span:nth-child(odd):hover {
+  /* color: #ccc; */
+  /* font-size: 14px; */
+  /* margin-left: 10px; */
+  cursor: pointer;
+  color: red;
+}
+
+.main-right > div:nth-child(1) > div:nth-child(2) {
+  display: flex;
+  margin-top: 5px;
+}
+
+.main-right > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) {
+  background-color: red;
+  border-radius: 60px;
+  padding: 5px;
+  color: white;
+  font-size: 14px;
+  flex: 1;
+  text-align: center;
+}
+
+.main-right > div:nth-child(1) > div:nth-child(2) > div:nth-child(2) {
+  background-color: black;
+  border-radius: 60px;
+  padding: 5px;
+  color: yellow;
+  font-size: 14px;
+  flex: 1;
+  text-align: center;
+  margin-left: 10px;
+}
+
+.main-right > div:nth-child(2) {
+  margin-left: 10px;
+
+  display: flex;
+  flex-direction: column;
+  /* border: 1px solid blueviolet; */
+}
+/* .main-right > div:nth-child(2) > div {
+  display: flex;
+
+} */
+
+.main-right > div:nth-child(2) > div {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5px;
+}
+
+.main-right > div:nth-child(2) > div:not(:nth-child(1)) {
+  font-size: 14px;
+}
+
+.main-right > div:nth-child(2) > div:not(:nth-child(2)) > div:nth-child(1) {
+  background-color: #e7ababed;
+  color: red;
+  padding: 1px 2px;
+}
+
+.main-right > div:nth-child(3) {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-right > div:nth-child(3) > div {
+  display: flex;
+  /* flex-direction: column; */
+  /* justify-content: space-between; */
+}
+
+.main-right > div:nth-child(3) > div > div {
+  flex: 1;
+  /* flex-direction: column; */
+  /* justify-content: space-between; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main-right .service-icon {
+  font-size: 35px;
+}
+
+.main-right .service-text {
+  /* text-align: center; */
+  font-size: 12px;
+  /* border: 1px solid red; */
+}
+.main-right .service-box {
+  padding: 8px 0;
+}

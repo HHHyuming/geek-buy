@@ -1,0 +1,76 @@
+.main-left-nav {
+  display: flex;
+  /* position: relative; */
+}
+
+.main-left-nav > div:nth-child(1) > span:nth-child(odd):hover {
+  color: red;
+  cursor: pointer;
+}
+
+.main-left-nav > div:nth-child(2) {
+  display: none;
+  position: absolute;
+  left: 100%;
+  top: -1px;
+  width: 800px;
+  height: 590px;
+  background-color: white;
+  box-shadow: 5px -5px 3px rgba(100, 100, 100, 0.3);
+  border: 2px solid #ccc;
+  border-top: none;
+  border-right: none;
+  /* box-sizing: border-box; */
+}
+
+.main-left-nav:hover > div:nth-child(2) {
+  display: block;
+}
+.main-left-nav:hover {
+  background-color: #ccc;
+}
+.main-left-nav > div:nth-child(2) > div {
+  /* position: absolute;
+    left: 100%; */
+  display: flex;
+  flex-direction: column;
+}
+.main-left-nav > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div {
+  background-color: #333333;
+  color: white;
+}
+
+.main-left-nav
+  > div:nth-child(2)
+  > div:nth-child(1)
+  > div:nth-child(1)
+  > div:hover {
+  background-color: red;
+  cursor: pointer;
+}
+
+.main-left-nav > div:nth-child(2) > div > div {
+  display: flex;
+  flex-wrap: wrap;
+}
+.main-left-nav > div:nth-child(2) > div {
+  padding: 20px;
+}
+.main-left-nav > div:nth-child(2) > div > div > div {
+  padding: 5px;
+  margin-left: 10px;
+}
+
+.main-left-nav > div:nth-child(2) > div > div > div:not(:nth-child(1)) {
+  font-size: 14px;
+  color: #818181;
+}
+
+.main-left-nav
+  > div:nth-child(2)
+  > div
+  > div:not(:nth-child(1))
+  > div:nth-child(1):hover {
+  color: red;
+  cursor: pointer;
+}

@@ -1,0 +1,73 @@
+.swiper-main {
+  position: relative;
+  width: 600px;
+  height: 478px;
+  overflow: hidden;
+  margin: 0 auto;
+  border: 3px solid green;
+}
+.swiper-buttons {
+  position: absolute;
+  right: 40px;
+  bottom: 10px;
+}
+.swiper-buttons > span {
+  border-radius: 50%;
+  border: 1px solid orange;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  color: white;
+}
+.swiper-buttons > span:hover {
+  background-color: orange;
+}
+.swiper-wrap {
+  position: absolute;
+  width: 3000px;
+  display: flex;
+}
+.swiper-wrap img {
+  width: 600px;
+  /* height: 400px; */
+}
+.arrow_left {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  font-size: 20px;
+  color: white;
+  opacity: 0.7;
+  padding: 10px;
+  padding-left: 0;
+  padding-top: 0;
+  text-align: center;
+}
+
+.arrow_right {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  font-size: 20px;
+  color: white;
+  opacity: 0.7;
+  padding: 10px;
+  padding-top: 0;
+  padding-right: 0;
+  text-align: center;
+}
+
+.arrow_left:hover {
+  /* border-left: none; */
+  opacity: 1;
+  background-color: black;
+  border-radius: 0 100% 100% 0/0 50% 50% 0;
+  color: white;
+}
+.arrow_right:hover {
+  opacity: 1;
+  background-color: black;
+  color: white;
+  border-radius: 100% 0 0 100%/50% 0 0 50%;
+}

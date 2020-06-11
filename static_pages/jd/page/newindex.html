@@ -6,14 +6,24 @@
     <title>Document</title>
     <link
       rel="stylesheet"
-      href="//at.alicdn.com/t/font_1859056_pi5ilo8xwyj.css"
+      href="//at.alicdn.com/t/font_1859056_jx4z1fk6l0f.css
+      "
     />
     <link rel="stylesheet" href="../css/nav.css" />
     <link rel="stylesheet" href="../css/top.css" />
     <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/main_left.css" />
+    <link rel="stylesheet" href="../css/main_right.css" />
+    <link rel="stylesheet" href="../css/swiper.css" />
   </head>
 
   <style>
+    input::placeholder {
+      color: #bbb;
+      margin-left: 5px;
+      display: block;
+      padding: 10px;
+    }
     body {
       background-color: #f4f4f4;
       height: 100vh;
@@ -26,7 +36,7 @@
     }
     /* header */
     .top {
-      border: 1px solid blueviolet;
+      /* border: 1px solid blueviolet; */
       height: 40px;
       display: flex;
       justify-content: space-between;
@@ -40,34 +50,41 @@
       height: 175px;
       position: absolute;
       left: 0;
-      border: 1px solid red;
+      /* border: 1px solid red; */
     }
     /* main */
-    /* a1 */
-    main article:nth-of-type(1) {
+    /* a1  */
+    main > article:nth-of-type(1) {
       display: flex;
       height: 590px;
-      border: 1px solid seagreen;
-      margin-top: 197px;
+      /* border: 1px solid seagreen; */
+      margin-top: 187px;
     }
-
-    main article section:nth-of-type(1) {
+    /* left */
+    main > article > section:nth-of-type(1) {
       /* background-color: greenyellow; */
       flex: 1;
       display: flex;
       flex-direction: column;
       background-color: white;
-      justify-content: center;
-      align-items: center;
+      position: relative;
+    }
+    main > article > section:nth-of-type(1) > div {
+      /* background-color: greenyellow; */
+      margin-left: 10px;
+      margin-top: 10px;
     }
 
-    main article section:nth-of-type(2) {
-      background-color: orange;
-      flex: 2;
+    /* center */
+    main > article > section:nth-of-type(2) {
+      background-color: white;
+      flex: 3;
+      margin-left: 10px;
+      margin-right: 10px;
     }
-
-    main article section:nth-of-type(3) {
-      background-color: purple;
+    /* right */
+    main > article > section:nth-of-type(3) {
+      background-color: white;
       flex: 1;
     }
     /* a2 */
@@ -307,50 +324,83 @@
       <main>
         <article>
           <section class="main-left">
-            <div>
-              <span>家用电器</span>
+            <div class="main-left-nav">
+              <div>
+                <span>家用电器</span>
+              </div>
               <div>
                 <div>
-                  <div>家电馆</div>
-                  <div>家电专卖店</div>
-                  <div>家电服务</div>
-                  <div>企业采购</div>
-                  <div>商用电器</div>
-                  <div>以旧换新</div>
-                </div>
-                <div>
-                  <div>电视</div>
-                  <div>超薄电视</div>
-                  <div>全面屏电视</div>
-                  <div>智能电视</div>
-                  <div>教育电视</div>
-                  <div>OLED电视</div>
-                  <div>智慧屏</div>
-                  <div>4K超清电视</div>
-                </div>
-                <div>
-                  <div>空调</div>
-                  <div>空调挂机</div>
-                  <div>空调柜机</div>
-                  <div>中央空调</div>
-                  <div>变频空调</div>
-                  <div>一级能效</div>
-                  <div>移动空调</div>
-                  <div>以旧换新</div>
-                </div>
-                <div>
-                  <div>洗衣机</div>
-                  <div>滚筒洗衣机</div>
-                  <div>洗烘一体机</div>
-                  <div>波轮洗衣机</div>
-                  <div>迷你洗衣机</div>
-                  <div>烘干机</div>
-                  <div>移动空调</div>
+                  <div>
+                    <div>
+                      家电馆
+                      <i class="iconyoujiantou iconfont"></i>
+                    </div>
+
+                    <div>
+                      家电专卖店
+                      <i class="iconyoujiantou iconfont"></i>
+                    </div>
+                    <div>
+                      家电服务
+                      <i class="iconyoujiantou iconfont"></i>
+                    </div>
+                    <div>
+                      企业采购
+                      <i class="iconyoujiantou iconfont"></i>
+                    </div>
+                    <div>
+                      商用电器
+                      <i class="iconyoujiantou iconfont"></i>
+                    </div>
+                    <div>
+                      以旧换新
+                      <i class="iconyoujiantou iconfont"></i>
+                    </div>
+                  </div>
+
+                  <div>
+                    <div>
+                      <strong>电视</strong>
+                      <i class="iconyoujiantou iconfont"></i>
+                    </div>
+                    <div>超薄电视</div>
+                    <div>全面屏电视</div>
+                    <div>智能电视</div>
+                    <div>教育电视</div>
+                    <div>OLED电视</div>
+                    <div>智慧屏</div>
+                    <div>4K超清电视</div>
+                  </div>
+                  <div>
+                    <div>
+                      <strong>空调</strong>
+                      <i class="iconyoujiantou iconfont"></i>
+                    </div>
+                    <div>空调挂机</div>
+                    <div>空调柜机</div>
+                    <div>中央空调</div>
+                    <div>变频空调</div>
+                    <div>一级能效</div>
+                    <div>移动空调</div>
+                    <div>以旧换新</div>
+                  </div>
+                  <div>
+                    <div>
+                      <strong>洗衣机</strong>
+                      <i class="iconyoujiantou iconfont"></i>
+                    </div>
+                    <div>滚筒洗衣机</div>
+                    <div>洗烘一体机</div>
+                    <div>波轮洗衣机</div>
+                    <div>迷你洗衣机</div>
+                    <div>烘干机</div>
+                    <div>移动空调</div>
+                  </div>
                 </div>
               </div>
             </div>
 
-            <div>
+            <div class="main-left-nav">
               <div>
                 <span>手机</span>
                 <span>/</span>
@@ -359,30 +409,349 @@
                 <span>数码</span>
               </div>
               <div>
-                <div>玩3C</div>
-                <div>手机频道</div>
-                <div>网上营业厅</div>
-                <div>配件频道</div>
-                <div>智能数码</div>
-                <div>影像Club</div>
+                <div>
+                  <div>
+                    <div>
+                      玩3C
+                      <i class="iconyoujiantou iconfont"></i>
+                    </div>
+                    <div>
+                      手机频道
+                      <i class="iconyoujiantou iconfont"></i>
+                    </div>
+                    <div>
+                      网上营业厅
+                      <i class="iconyoujiantou iconfont"></i>
+                    </div>
+                    <div>
+                      配件频道
+                      <i class="iconyoujiantou iconfont"></i>
+                    </div>
+                    <div>
+                      智能数码
+                      <i class="iconyoujiantou iconfont"></i>
+                    </div>
+                    <div>
+                      影像Club
+                      <i class="iconyoujiantou iconfont"></i>
+                    </div>
+                  </div>
+                  <div>
+                    <div>
+                      <strong>手机通讯</strong>
+                      <i class="iconyoujiantou iconfont"></i>
+                    </div>
+                    <div>手机618</div>
+                    <div>手机</div>
+                    <div>游戏手机</div>
+                    <div>5G手机</div>
+                    <div>拍照手机</div>
+                    <div>全面屏手机</div>
+                    <div>老人机</div>
+                    <div>对讲机</div>
+                    <div>以旧换新</div>
+                    <div>手机维修</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="main-left-nav">
+              <div>
+                <span>电脑</span>
+                <span>/</span>
+                <span>办公</span>
+                <span>/</span>
               </div>
               <div>
-                <div>手机通讯</div>
-                <div>手机618</div>
-                <div>手机</div>
-                <div>游戏手机</div>
-                <div>5G手机</div>
-                <div>拍照手机</div>
-                <div>全面屏手机</div>
-                <div>老人机</div>
-                <div>对讲机</div>
-                <div>以旧换新</div>
-                <div>手机维修</div>
+                <div>
+                  <div>
+                    <div>
+                      玩3C
+                      <i class="iconyoujiantou iconfont"></i>
+                    </div>
+                    <div>
+                      手机频道
+                      <i class="iconyoujiantou iconfont"></i>
+                    </div>
+                    <div>
+                      网上营业厅
+                      <i class="iconyoujiantou iconfont"></i>
+                    </div>
+                    <div>
+                      配件频道
+                      <i class="iconyoujiantou iconfont"></i>
+                    </div>
+                    <div>
+                      智能数码
+                      <i class="iconyoujiantou iconfont"></i>
+                    </div>
+                    <div>
+                      影像Club
+                      <i class="iconyoujiantou iconfont"></i>
+                    </div>
+                  </div>
+                  <div>
+                    <div>
+                      <strong>手机通讯</strong>
+                      <i class="iconyoujiantou iconfont"></i>
+                    </div>
+                    <div>手机618</div>
+                    <div>手机</div>
+                    <div>游戏手机</div>
+                    <div>5G手机</div>
+                    <div>拍照手机</div>
+                    <div>全面屏手机</div>
+                    <div>老人机</div>
+                    <div>对讲机</div>
+                    <div>以旧换新</div>
+                    <div>手机维修</div>
+                  </div>
+
+                  <div>
+                    <div>
+                      <strong>电脑整机</strong>
+                      <i class="iconyoujiantou iconfont"></i>
+                    </div>
+
+                    <div>笔记本</div>
+                    <div>游戏本</div>
+                    <div>平板电脑</div>
+                    <div>台式机</div>
+                    <div>一体机</div>
+                    <div>服务器/工作站</div>
+                  </div>
+
+                  <div>
+                    <div>
+                      <strong>游戏设备</strong>
+                      <i class="iconyoujiantou iconfont"></i>
+                    </div>
+
+                    <div>游戏机</div>
+                    <div>游戏耳机</div>
+                    <div>手柄/方向盘</div>
+                    <div>游戏软件</div>
+                    <div>游戏周边</div>
+                  </div>
+                </div>
               </div>
             </div>
           </section>
-          <section class="main-center"></section>
-          <section class="main-right"></section>
+
+          <section class="main-center">
+            <div class="swiper-main">
+              <div class="swiper-wrap" style="left: 0;">
+                <img src="../static/1.jpg" alt="" style="width: 600px;" />
+                <img src="../static/2.jpg" alt="" style="width: 600px;" />
+                <img src="../static/3.jpg" alt="" style="width: 600px;" />
+                <img src="../static/4.jpg" alt="" style="width: 600px;" />
+                <img src="../static/5.jpg" alt="" style="width: 600px;" />
+              </div>
+              <div class="swiper-buttons">
+                <span class="switch-swiper">1</span>
+                <span class="switch-swiper">2</span>
+                <span class="switch-swiper">3</span>
+                <span class="switch-swiper">4</span>
+                <span class="switch-swiper">5</span>
+              </div>
+              <a
+                href="javascript:;"
+                class="arrow arrow_left"
+                style="color: yellow;"
+                >&lt;</a
+              >
+              <a
+                href="javascript:;"
+                class="arrow arrow_right"
+                style="color: yellow;"
+                >&gt;</a
+              >
+            </div>
+          </section>
+
+          <section class="main-right">
+            <div>
+              <div>
+                <div>
+                  <img
+                    src="data:image/png;base64,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"
+                    alt=""
+                    style="border-radius: 50%; width: 50px;"
+                  />
+                </div>
+                <div>
+                  <div>Hi~欢迎逛京东</div>
+                  <div>
+                    <span>登录</span>
+                    <span>|</span>
+                    <span>注册</span>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div>新人福利</div>
+                <div>PLUS会员</div>
+              </div>
+            </div>
+
+            <div>
+              <div
+                style="
+                  height: 1px;
+                  background: linear-gradient(
+                    270deg,
+                    white,
+                    #eeeeee,
+                    #eeeeee,
+                    white
+                  );
+                  margin-bottom: 10px;
+                "
+              ></div>
+              <div>
+                <div>
+                  <strong><span>京东快报</span></strong>
+                </div>
+                <div>
+                  <span style="color: #bbb; font-size: 14px;"
+                    >更多
+                    <i
+                      class="iconyoujiantou iconfont"
+                      style="font-size: 10px;"
+                    ></i>
+                  </span>
+                </div>
+              </div>
+              <div>
+                <div>最新</div>
+                <div>美的多功能养生壶</div>
+              </div>
+
+              <div>
+                <div>热议</div>
+                <div>一站式补齐孕妈营养</div>
+              </div>
+              <div>
+                <div>热评</div>
+                <div>新房装修甲醛重?</div>
+              </div>
+              <div>
+                <div>推荐</div>
+                <div>搜狗AI智能录音笔</div>
+              </div>
+              <div
+                style="
+                  height: 1px;
+                  background: linear-gradient(
+                    270deg,
+                    white,
+                    #eeeeee,
+                    #eeeeee,
+                    white
+                  );
+                  margin-top: 10px;
+                "
+              ></div>
+            </div>
+
+            <div>
+              <div>
+                <div class="service-box">
+                  <i
+                    class="iconfont iconshouji54 service-icon"
+                    style="color: royalblue;"
+                  ></i>
+                  <span class="service-text">
+                    话费
+                  </span>
+                </div>
+                <div class="service-box">
+                  <i
+                    class="iconfont iconfeiji service-icon"
+                    style="color: salmon;"
+                  ></i>
+                  <span class="service-text">机票</span>
+                </div>
+                <div class="service-box">
+                  <i
+                    class="iconfont iconHotel service-icon"
+                    style="color: turquoise;"
+                  ></i>
+                  <span class="service-text">酒店</span>
+                </div>
+              </div>
+              <div>
+                <div class="service-box">
+                  <i
+                    class="iconfont iconyouxi service-icon"
+                    style="color: yellowgreen;"
+                  ></i>
+                  <span class="service-text">游戏</span>
+                </div>
+                <div class="service-box">
+                  <i
+                    class="iconfont iconjiayouqia service-icon"
+                    style="color: crimson;"
+                  ></i>
+                  <span class="service-text">加油卡</span>
+                </div>
+                <div class="service-box">
+                  <i
+                    class="iconfont iconhuochepiao service-icon"
+                    style="color: darkorange;"
+                  ></i>
+                  <span class="service-text">火车票</span>
+                </div>
+              </div>
+              <div>
+                <div class="service-box">
+                  <i
+                    class="iconfont iconjingdongzhongchou service-icon"
+                    style="color: darkorchid;"
+                  ></i>
+                  <span class="service-text">众筹</span>
+                </div>
+                <div class="service-box">
+                  <i
+                    class="iconfont iconlicai service-icon"
+                    style="color: darkturquoise;"
+                  ></i>
+                  <span class="service-text">理财</span>
+                </div>
+                <div class="service-box">
+                  <i
+                    class="iconfont iconbaitiao service-icon"
+                    style="color: goldenrod;"
+                  ></i>
+                  <span class="service-text">白条</span>
+                </div>
+              </div>
+              <div>
+                <div class="service-box">
+                  <i
+                    class="iconfont icondianyingpiao service-icon"
+                    style="color: lightblue;"
+                  ></i>
+                  <span class="service-text">电影票</span>
+                </div>
+                <div class="service-box">
+                  <i
+                    class="iconfont iconqiye service-icon"
+                    style="color: peru;"
+                  ></i>
+                  <span class="service-text">企业购</span>
+                </div>
+                <div class="service-box">
+                  <i
+                    class="iconfont iconshinshoplipinqia service-icon"
+                    style="color: aqua;"
+                  ></i>
+                  <span class="service-text">礼品卡</span>
+                </div>
+              </div>
+            </div>
+          </section>
         </article>
 
         <article>
@@ -398,4 +767,5 @@
       </main>
     </div>
   </body>
+  <script src="../js/swiper.js"></script>
 </html>

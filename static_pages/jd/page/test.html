@@ -7,23 +7,172 @@
   </head>
   <body>
     <style>
-      span::after {
-        content: "";
-        background-color: red;
-        border-radius: 5px;
+      .container {
+        position: relative;
+        width: 600px;
+        height: 400px;
+        overflow: hidden;
+        margin: 0 auto;
+        border: 3px solid green;
+      }
+      .buttons {
+        position: absolute;
+        right: 40px;
+        bottom: 10px;
+      }
+      .buttons > span {
+        border-radius: 50%;
+        border: 1px solid orange;
+        display: inline-block;
         width: 20px;
-        height: 10px;
-        display: block;
+        height: 20px;
+        text-align: center;
+        color: white;
+      }
+      .buttons > span:hover {
+        background-color: orange;
+      }
+      .wrap {
+        position: absolute;
+        width: 3000px;
+        display: flex;
+      }
+      img {
+        width: 600px;
+        height: 400px;
+      }
+      .arrow_left {
+        position: absolute;
+        left: 0;
+        top: 50%;
+        font-size: 20px;
+        color: white;
+        opacity: 0.7;
+        padding: 10px;
+        padding-left: 0;
+        padding-top: 0;
+        text-align: center;
+      }
+
+      .arrow_right {
         position: absolute;
         right: 0;
-        top: 0;
+        top: 50%;
+        font-size: 20px;
+        color: white;
+        opacity: 0.7;
+        padding: 10px;
+        padding-top: 0;
+        padding-right: 0;
+        text-align: center;
       }
-      span::after::after {
-        content: "1";
-        display: block;
+
+      .arrow_left:hover {
+        /* border-left: none; */
+        opacity: 1;
+        background-color: black;
+        border-radius: 0 100% 100% 0/0 50% 50% 0;
+        color: white;
+      }
+      .arrow_right:hover {
+        opacity: 1;
+        background-color: black;
+        color: white;
+        border-radius: 100% 0 0 100%/50% 0 0 50%;
       }
     </style>
-
-    <span style="position: relative;">购物车</span><i></i>
+    <div class="container">
+      <div class="wrap" style="left: 0;">
+        <img src="../static/1.jpg" alt="" style="width: 600px;" />
+        <img src="../static/2.jpg" alt="" style="width: 600px;" />
+        <img src="../static/3.jpg" alt="" style="width: 600px;" />
+        <img src="../static/4.jpg" alt="" style="width: 600px;" />
+        <img src="../static/5.jpg" alt="" style="width: 600px;" />
+      </div>
+      <div class="buttons">
+        <span class="switch-swiper">1</span>
+        <span class="switch-swiper">2</span>
+        <span class="switch-swiper">3</span>
+        <span class="switch-swiper">4</span>
+        <span class="switch-swiper">5</span>
+      </div>
+      <a href="javascript:;" class="arrow arrow_left">&lt;</a>
+      <a href="javascript:;" class="arrow arrow_right">&gt;</a>
+    </div>
   </body>
+  <script>
+    let wrap_el = document.querySelector(".wrap");
+    let next_el = document.querySelector(".arrow_right");
+    let prev_el = document.querySelector(".arrow_left");
+    let swiper_timer = null;
+    let swiper_index = 0;
+    let container_el = document.querySelector(".container");
+    let spans_el = document.querySelectorAll(".switch-swiper");
+
+    function next_pic() {
+      let new_left = parseInt(wrap_el.style.left) - 600;
+
+      if (new_left === -3000) {
+        new_left = 0;
+      }
+      wrap_el.style.left = new_left + "px";
+    }
+
+    function prev_pic() {
+      let new_left = parseInt(wrap_el.style.left) + 600;
+      if (new_left === 600) {
+        new_left = -2400;
+      }
+      wrap_el.style.left = new_left + "px";
+    }
+
+    next_el.onclick = function () {
+      next_pic();
+    };
+
+    prev_el.onclick = function () {
+      console.log("上一张");
+      prev_pic();
+    };
+
+    function auto_play() {
+      spans_el[swiper_index].style.backgroundColor = "orange";
+
+      swiper_timer = setInterval(function () {
+        swiper_index += 1;
+
+        if (swiper_index > 4) {
+          swiper_index = 0;
+        }
+        console.log(swiper_index);
+
+        spans_el[swiper_index].style.backgroundColor = "orange";
+        spans_el.forEach((ele, i) => {
+          if (i !== swiper_index) {
+            ele.style.backgroundColor = "";
+          }
+        });
+        next_pic();
+      }, 1000);
+    }
+
+    container_el.onmouseenter = function () {
+      clearInterval(swiper_timer);
+    };
+    container_el.onmouseleave = function () {
+      auto_play();
+    };
+
+    spans_el.forEach((ele, i) => {
+      ele.onmouseenter = function () {
+        spans_el.forEach((subel) => {
+          subel.style.backgroundColor = "";
+        });
+        ele.style.backgroundColor = "orange";
+        wrap_el.style.left = i * -600 + "px";
+        swiper_index = i;
+      };
+    });
+    auto_play();
+  </script>
 </html>
